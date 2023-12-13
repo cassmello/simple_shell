@@ -1,0 +1,3 @@
+PROMPT_FORMAT=%s@%s:%s $ 
+HISTORY_SIZE=100
+

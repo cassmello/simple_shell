@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+all: myshell
+
+myshell: command_line_parsing_main.c command_line_parsing.c command_execution_main.c command_execution.c builtin_commands_main.c builtin_commands.c io_redirection_main.c io_redirection.c background_processes_main.c background_processes.c signal_handling_main.c signal_handling.c environment_variables_main.c environment_variables.c error_handling_main.c error_handling.c wildcard_expansion_main.c wildcard_expansion.c variable_expansion_main.c variable_expansion.c command_substitution_main.c command_substitution.c quoting_escaping_main.c quoting_escaping.c history_feature_main.c history_feature.c job_control_main.c job_control.c interactive_editing_main.c interactive_editing.c prompt_customization_main.c prompt_customization.c permissions_security_main.c permissions_security.c
+    $(CC) $(CFLAGS) -o myshell command_line_parsing_main.c command_line_parsing.c command_execution_main.c command_execution.c builtin_commands_main.c builtin_commands.c io_redirection_main.c io_redirection.c background_processes_main.c background_processes.c signal_handling_main.c signal_handling.c environment_variables_main.c environment_variables.c error_handling_main.c error_handling.c wildcard_expansion_main.c wildcard_expansion.c variable_expansion_main.c variable_expansion.c command_substitution_main.c command_substitution.c quoting_escaping_main.c quoting_escaping.c history_feature_main.c history_feature.c job_control_main.c job_control.c interactive_editing_main.c interactive_editing.c prompt_customization_main.c prompt_customization.c permissions_security_main.c permissions_security.c
+
+clean:
+    rm -f myshell
+

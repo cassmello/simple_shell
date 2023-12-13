@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -I /usr/include/CUnit
+LIBS = -lcunit
+
+all: test_shell
+
+test_shell: testing_main.c testing.c command_line_parsing.c io_redirection.c builtin_commands.c background_processes.c signal_handling.c environment_variables.c error_handling.c wildcard_expansion.c variable_expansion.c command_substitution.c quoting_escaping.c history_feature.c job_control.c interactive_editing.c prompt_customization.c permissions_security.c configurability.c scripting_language.c
+    $(CC) $(CFLAGS) -o test_shell testing_main.c testing.c command_line_parsing.c io_redirection.c builtin_commands.c background_processes.c signal_handling.c environment_variables.c error_handling.c wildcard_expansion.c variable_expansion.c command_substitution.c quoting_escaping.c history_feature.c job_control.c interactive_editing.c prompt_customization.c permissions_security.c configurability.c scripting_language.c $(LIBS)
+
+clean:
+    rm -f test_shell
+

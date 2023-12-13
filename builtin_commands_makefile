@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+all: myshell
+
+myshell: command_line_parsing_main.c command_line_parsing.c command_execution_main.c command_execution.c builtin_commands_main.c builtin_commands.c
+	$(CC) $(CFLAGS) -o myshell command_line_parsing_main.c command_line_parsing.c command_execution_main.c command_execution.c builtin_commands_main.c builtin_commands.c
+
+clean:
+	rm -f myshell
+
